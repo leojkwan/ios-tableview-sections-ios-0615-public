@@ -12,6 +12,7 @@
 		26D2EC7CF35DD0479B61847E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94348D747DA419CA40DE9A58 /* Images.xcassets */; };
 		274E004E2F7DFB4BCC1FA128 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D796E6247B49860304DD2D1 /* libPods-unit_tests.a */; };
 		6191FE33C8C724323AD8B38F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330A711D06806FFFDF20B7AD /* Foundation.framework */; };
+		9442C9951B31DC95005DB91F /* FISStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442C9941B31DC95005DB91F /* FISStudent.m */; };
 		E245C2A81B1CF76F00438E2D /* FISTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E245C2A71B1CF76F00438E2D /* FISTableViewControllerSpec.m */; };
 		E2F260E31B17A41500949FCA /* FISTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F260E21B17A41500949FCA /* FISTableViewController.m */; };
 		E2F260E51B17A46100949FCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F260E41B17A46100949FCA /* Main.storyboard */; };
@@ -38,15 +39,17 @@
 		41A640C89E3C4B09F2173B29 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		580773BEC9DC3EC5F1A56772 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		94348D747DA419CA40DE9A58 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9442C9931B31DC95005DB91F /* FISStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudent.h; sourceTree = "<group>"; };
+		9442C9941B31DC95005DB91F /* FISStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudent.m; sourceTree = "<group>"; };
 		AC68BF55EAEDB623464BDDBF /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		BB0AC04B7B9D7DA42EE097D6 /* ios-tableview-sections-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ios-tableview-sections-Prefix.pch"; sourceTree = "<group>"; };
 		E245C2A71B1CF76F00438E2D /* FISTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTableViewControllerSpec.m; sourceTree = "<group>"; };
 		E2F260E11B17A41500949FCA /* FISTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTableViewController.h; sourceTree = "<group>"; };
 		E2F260E21B17A41500949FCA /* FISTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTableViewController.m; sourceTree = "<group>"; };
 		E2F260E41B17A46100949FCA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E846210A497472A9281E21A5 /* FISAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FISAppDelegate.m; sourceTree = "<group>"; };
+		E846210A497472A9281E21A5 /* FISAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FISAppDelegate.m; path = ../FISAppDelegate.m; sourceTree = "<group>"; };
 		EB550FBC335C0AAEE39EB732 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F224206993A181C101511740 /* FISAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
+		F224206993A181C101511740 /* FISAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FISAppDelegate.h; path = ../FISAppDelegate.h; sourceTree = "<group>"; };
 		F6FD392706834B6E0A264D30 /* ios-tableview-sections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-tableview-sections.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +94,8 @@
 		3D5FD3E164430F289CEDA9F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F224206993A181C101511740 /* FISAppDelegate.h */,
+				E846210A497472A9281E21A5 /* FISAppDelegate.m */,
 				94348D747DA419CA40DE9A58 /* Images.xcassets */,
 				301B9B688D41593FCA37887C /* LaunchScreen.xib */,
 				2E4374ABDB2B731A4663F61F /* Other-Sources */,
@@ -159,10 +164,10 @@
 		EC51D7641E0C129D69C0A53E /* ios-tableview-sections */ = {
 			isa = PBXGroup;
 			children = (
-				F224206993A181C101511740 /* FISAppDelegate.h */,
-				E846210A497472A9281E21A5 /* FISAppDelegate.m */,
 				E2F260E11B17A41500949FCA /* FISTableViewController.h */,
 				E2F260E21B17A41500949FCA /* FISTableViewController.m */,
+				9442C9931B31DC95005DB91F /* FISStudent.h */,
+				9442C9941B31DC95005DB91F /* FISStudent.m */,
 				E2F260E41B17A46100949FCA /* Main.storyboard */,
 				3D5FD3E164430F289CEDA9F2 /* Resources */,
 			);
@@ -227,6 +232,11 @@
 				CLASSPREFIX = FIS;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "The Flatiron School";
+				TargetAttributes = {
+					63E35FCD7E734CA68F1A5081 = {
+						DevelopmentTeam = DWCYJ9H353;
+					};
+				};
 			};
 			buildConfigurationList = 6852D92032DB58F74F680893 /* Build configuration list for PBXProject "ios-tableview-sections" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -303,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9442C9951B31DC95005DB91F /* FISStudent.m in Sources */,
 				E2F260E31B17A41500949FCA /* FISTableViewController.m in Sources */,
 				1D7A3280F12235E005A5C12D /* FISAppDelegate.m in Sources */,
 				09DAC75489703DF665828A7D /* LaunchScreen.xib in Sources */,
@@ -333,10 +344,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ios-tableview-sections/Resources/Other-Sources/ios-tableview-sections-Prefix.pch";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
 				INFOPLIST_FILE = "ios-tableview-sections/Resources/Other-Sources/ios-tableview-sections-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -349,6 +364,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -433,6 +449,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -444,10 +463,12 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
 				INFOPLIST_FILE = "ios-tableview-sections/Resources/Other-Sources/ios-tableview-sections-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};

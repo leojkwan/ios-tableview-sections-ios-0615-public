@@ -16,32 +16,68 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    FISStudent *Leo = [[FISStudent alloc] init];
+    FISStudent *Alan = [[FISStudent alloc] init];
+    FISStudent *Yoyoseob = [[FISStudent alloc] init];
+    FISStudent *Lukas = [[FISStudent alloc] init];
+    self.students = @[Leo,Alan,Yoyoseob,Lukas];
+
+    Leo.name = @"Leo";
+    Alan.name = @"Alan";
+    Yoyoseob.name = @"Yoyoseob";
+    Lukas.name = @"Lukas";
+    Leo.favoriteThings = @[@"a", @"b", @"c"];
+    Alan.favoriteThings = @[@"d", @"e", @"f"];
+    Yoyoseob.favoriteThings = @[@"a", @"b", @"c"];
+    Lukas.favoriteThings = @[@"a", @"b", @"c"];
+    
+    
     
 }
 
-#pragma mark - Table view data source
+
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
+
+    return [self.students count];
+    
+    }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+
+    FISStudent *student = self.students[section];
+   
+    return student.favoriteThings.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+-(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    // Configure the cell...
+    FISStudent *student = self.students[section];
+    return student.name;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"expandingCell" forIndexPath:indexPath];
+    
+    FISStudent *studentForThisSection = self.students[indexPath.section];
+//    NSInteger numberOfThingsStudentLikes = [studentForThisSection.favoriteThings count];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", studentForThisSection.favoriteThings[indexPath.row]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", indexPath.row + 1 ];
     
     return cell;
 }
-*/
+
+-(NSInteger) tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 2;
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
